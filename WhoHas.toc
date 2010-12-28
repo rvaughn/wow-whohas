@@ -1,6 +1,6 @@
 ## Interface: 40000
 ## Title: WhoHas
-## Version: 4.0.0b3
+## Version: 4.0.1
 ## Author: Gruma
 ## Notes: Modifies the tooltip to show who has the item displayed in it.
 ## Notes-deDE: Ändert den Tooltip um anzuzeigen, wer den Gegenstand besitzt.
@@ -8,7 +8,7 @@
 ## SavedVariables: WhoHasConfig WhoHasData
 ## OptionalDeps: CharacterProfiler Possessions Armory myAddons SellValue LinkWranger
 ## RequiredDeps:
-## X-Date: November 11, 2010
+## X-Date: December 27, 2010
 ## X-Email: gruma@pobox.com
 ## X-Website: http://my.curse.com/downloads/wow-addons/details/who-has.aspx
 ## X-Category: MYADDONS_CATEGORY_INVENTORY

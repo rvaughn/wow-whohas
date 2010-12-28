@@ -125,6 +125,8 @@ function Scanner.Armory:ScanVault()
             if (who == guild) then
                vault[who] = nil;
             end
+            -- lordy... clean this mess up! too much duplication.
+            -- possibly use a closure for adding counts to the vault
             if (not vault[who]) then
                vault[who] = {};
                vault[who].hasTabs = config.vaulttabs;
@@ -145,7 +147,9 @@ function Scanner.Armory:ScanVault()
                                  if (count[1] and count[4]) then
                                     local name = count[1];
                                     count = count[4];
-                                    vault[who][tab][name] = count;
+                                    if (name and count) then
+                                       vault[who][tab][name] = count;
+                                    end
                                  end
                               else
                                  debug("unusable data found in ArmoryGuildBank - counts may be incomplete");
@@ -158,9 +162,25 @@ function Scanner.Armory:ScanVault()
                   for tab = 1, MAX_GUILDBANK_TABS do
                      if (bank["Tab"..tab] and bank["Tab"..tab].Items) then
                         for link, count in pairs(bank["Tab"..tab].Items) do
-                           local name = GetItemInfo("item:"..link);
-                           if (name) then
-                              vault[who][name] = (vault[who][name] or 0) + count;
+                           if (link and count) then
+                              -- sometimes ArmoryGuildBank has a table, sometimes a number
+                              -- I don't know why
+                              if (type(count) == "number") then
+                                 local name = GetItemInfo("item:"..link);
+                                 if (name) then
+                                    vault[who][name] = (vault[who][name] or 0) + count;
+                                 end
+                              elseif (type(count) == "table") then
+                                 if (count[1] and count[4]) then
+                                    local name = count[1];
+                                    count = count[4];
+                                    if (name and count) then
+                                       vault[who][name] = (vault[who][name] or 0) + count;
+                                    end
+                                 end
+                              else
+                                 debug("unusable data found in ArmoryGuildBank - counts may be incomplete");
+                              end
                            end
                         end
                      end
