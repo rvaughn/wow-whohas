@@ -182,7 +182,7 @@
           </Anchor>
         </Anchors>
       </CheckButton>      
-      <CheckButton name="$parentKeyringButton" inherits="WhoHasOptionButtonTemplate">
+      <CheckButton name="$parentVoidStoreButton" inherits="WhoHasOptionButtonTemplate">
         <Anchors>
           <Anchor point="TOPLEFT" relativeTo="$parentInboxButton" relativePoint="BOTTOMLEFT">
             <Offset>
@@ -193,7 +193,7 @@
       </CheckButton>      
       <CheckButton name="$parentEquipmentButton" inherits="WhoHasOptionButtonTemplate">
         <Anchors>
-          <Anchor point="TOPLEFT" relativeTo="$parentKeyringButton" relativePoint="BOTTOMLEFT">
+          <Anchor point="TOPLEFT" relativeTo="$parentVoidStoreButton" relativePoint="BOTTOMLEFT">
             <Offset>
               <AbsDimension x="0" y="4"/>
             </Offset>

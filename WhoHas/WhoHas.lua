@@ -1,14 +1,15 @@
 -- define a few globals
 WhoHas = {}
 
-WHOHAS_CONFIG_VERSION = 6;
+WHOHAS_CONFIG_VERSION = 7;
 
 WhoHasConfig = {
    enabled          = 1,
    totals           = 1,
    stacks           = 1,
    inbox            = 1,
-   keyring          = 1,
+-- removed in v7
+-- keyring          = 1,
    bags             = 1,
    equipment        = 1,
    allfactions      = nil,
@@ -26,6 +27,8 @@ WhoHasConfig = {
    vaulttabs        = nil,
 -- added in v6
    backend          = nil,
+-- added in v7
+   voidstore        = 1,
 }
 
 WhoHasData = {
@@ -60,22 +63,22 @@ data   = global.WhoHasData;
 WHOHAS_CATEGORY_INVENTORY = "inventory";
 WHOHAS_CATEGORY_BANK      = "bank";
 WHOHAS_CATEGORY_INBOX     = "inbox";
-WHOHAS_CATEGORY_KEYRING   = "keyring";
 WHOHAS_CATEGORY_EQUIPMENT = "equipment";
 WHOHAS_CATEGORY_INVBAGS   = "invbags";
 WHOHAS_CATEGORY_BANKBAGS  = "bankbags";
 WHOHAS_CATEGORY_VAULT     = "vault";
 WHOHAS_CATEGORY_TOTAL     = "total";
 WHOHAS_CATEGORY_STACK     = "stack";
+WHOHAS_CATEGORY_VOIDSTORE = "voidstore";
 
 categories = {
    WHOHAS_CATEGORY_INVENTORY,
    WHOHAS_CATEGORY_BANK,
    WHOHAS_CATEGORY_INBOX,
-   WHOHAS_CATEGORY_KEYRING,
    WHOHAS_CATEGORY_EQUIPMENT,
    WHOHAS_CATEGORY_INVBAGS,
    WHOHAS_CATEGORY_BANKBAGS,
+   WHOHAS_CATEGORY_VOIDSTORE,
 }
 
 -------------------------------------------------------------------------------
@@ -270,24 +273,28 @@ end
 
 function events.VARIABLES_LOADED()
    -- make sure we have aliases to the loaded data
-   config = WhoHasConfig;
-   data   = WhoHasData;
+   config = WhoHasConfig
+   data   = WhoHasData
    -- convert old config format to new
    if (not config.version or config.version < 2) then
-      config.vault = 1;
-      config.version = 2;
+      config.vault = 1
+      config.version = 2
    end
    if (config.version < 4) then
-      config.mines = 1;
-      config.ores = 1;
+      config.mines = 1
+      config.ores = 1
+   end
+   if (config.version < 7) then
+      config.keyring = nil
+      config.voidstore = 1
    end
    if (config.version < WHOHAS_CONFIG_VERSION) then
-      config.version = WHOHAS_CONFIG_VERSION;
+      config.version = WHOHAS_CONFIG_VERSION
    end
    if (LinkWrangler) then
-      LinkWrangler.RegisterCallback("WhoHas", ShowTooltip, "refresh");
+      LinkWrangler.RegisterCallback("WhoHas", ShowTooltip, "refresh")
    end
-   UpdateScanner();
+   UpdateScanner()
 end
 
 events.PLAYER_GUILD_UPDATE    = UpdateGuild;

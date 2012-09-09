@@ -77,9 +77,6 @@ end
 -- they don't actually gather any data if we can use data from another
 -- backend instead.
 
--- so far, Siz'z Possessions is the only backend that qualifies, and then
--- only if the user doesn't want to see individual guild bank tabs.
-
 function LoadGuildBank()
    if (config.vault and not backend:HasVaultData() and not vaultLoaded) then
       guild = GetGuildInfo("player");

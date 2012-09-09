@@ -4,7 +4,6 @@ WhoHas.option_strings = {
    ["WhoHasOptionsPanelTotalsButton"]     = "totals",
    ["WhoHasOptionsPanelStackSizeButton"]  = "stacks",
    ["WhoHasOptionsPanelInboxButton"]      = "inbox",
-   ["WhoHasOptionsPanelKeyringButton"]    = "keyring",
    ["WhoHasOptionsPanelEquipmentButton"]  = "equipment",
    ["WhoHasOptionsPanelBagsButton"]       = "bags",
    ["WhoHasOptionsPanelVaultButton"]      = "vault",
@@ -13,6 +12,7 @@ WhoHas.option_strings = {
    ["WhoHasOptionsPanelOresButton"]       = "ores",
    ["WhoHasOptionsPanelAllGuildsButton"]  = "allguilds",
    ["WhoHasOptionsPanelTabsButton"]       = "vaulttabs",
+   ["WhoHasOptionsPanelVoidStoreButton"]  = "voidstore",
 }
 
 -- these reference already-localized strings
@@ -21,7 +21,6 @@ WhoHas.option_text = {
    ["WhoHasOptionsPanelTotalsButton"]    = WhoHas.text.WhoHasTotalsButton,
    ["WhoHasOptionsPanelStackSizeButton"] = WhoHas.text.WhoHasStackSizeButton,
    ["WhoHasOptionsPanelInboxButton"]     = WhoHas.text.WhoHasInboxButton,
-   ["WhoHasOptionsPanelKeyringButton"]   = WhoHas.text.WhoHasKeyringButton,
    ["WhoHasOptionsPanelEquipmentButton"] = WhoHas.text.WhoHasEquipmentButton,
    ["WhoHasOptionsPanelBagsButton"]      = WhoHas.text.WhoHasBagsButton,
    ["WhoHasOptionsPanelVaultButton"]     = WhoHas.text.WhoHasVaultButton,
@@ -30,4 +29,5 @@ WhoHas.option_text = {
    ["WhoHasOptionsPanelOresButton"]      = WhoHas.text.WhoHasOresButton,
    ["WhoHasOptionsPanelAllGuildsButton"] = WhoHas.text.WhoHasAllGuildsButton,
    ["WhoHasOptionsPanelTabsButton"]      = WhoHas.text.WhoHasTabsButton,
+   ["WhoHasOptionsPanelVoidStoreButton"] = WhoHas.text.WhoHasVoidStoreButton,
 }

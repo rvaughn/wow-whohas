@@ -78,11 +78,6 @@ function Scanner.Armory:ScanChar(charName, charData, cache)
             end
          end
 
-         -- keyring
-         if (config.keyring) then
-            self:ScanContainer(WHOHAS_CATEGORY_KEYRING, inventory["Container"..KEYRING_CONTAINER], cache);
-         end
-
          -- inbox
          if (config.inbox) then
             self:ScanContainer(WHOHAS_CATEGORY_INBOX, inventory["Container"..ARMORY_MAIL_CONTAINER], cache);
@@ -90,6 +85,7 @@ function Scanner.Armory:ScanChar(charName, charData, cache)
 
          -- auctions? (ARMORY_AUCTIONS_CONTAINER)
          -- container -5?
+         -- void storage?
       end
    end
 end
