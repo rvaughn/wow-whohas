@@ -1,3 +1,16 @@
+2012-09-13 version 5.0.1
+        
+    * Note: This version patches one specific error. You do not
+      need to install this update unless you are using German or
+      French clients, or if you are seeing a 'bad argument #1'
+      error on line 641 of WhoHas.lua.
+        
+    * Added new strings to the German and French localizations.
+      These still need to be translated.
+        
+    * Modified the code so that it will log a message instead of
+      causing an error if a tooltip format string cannot be found.
+
 2012-09-09 version 5.0.0
         
     * Updated for WoW 5.0.4.

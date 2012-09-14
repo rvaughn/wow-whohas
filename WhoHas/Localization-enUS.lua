@@ -45,7 +45,7 @@ WhoHas.formats = {
    ["inventory"]                = "%u in %s's inventory",
    ["bank"]                     = "%u in %s's bank",
    ["inbox"]                    = "%u in %s's inbox",
-   ["voidstore"]                = "%u in %s's void storage",
+   ["keyring"]                  = "%u in %s's keyring",
    ["equipment"]                = "%u in %s's equipped items",
    ["invbags"]                  = "%u in %s's inventory bags",
    ["bankbags"]                 = "%u in %s's bank bags",
@@ -53,6 +53,7 @@ WhoHas.formats = {
    ["multivault"]               = "%u in %s's Guild Vault",
    ["vaulttab"]                 = "%u in the Guild Vault tab %u",
    ["multivaulttab"]            = "%u in %s's Guild Vault tab %u",
+   ["voidstore"]                = "%u in %s's void storage",
 
    ["total"]                    = "%u total",
    ["stack"]                    = "Stack size: %u",

@@ -638,8 +638,12 @@ function ListChar(charName, charData, text)
    for i, category in ipairs(categories) do
       local count = charData[category];
       if count and count > 0 then
-         table.insert(text, string.format(formats[category], count, charName));
-         total = total + count;
+         if formats[category] then
+            table.insert(text, string.format(formats[category], count, charName));
+            total = total + count;
+         else
+            debug("category format not found: " .. (format or "nil"))
+         end
       end
    end
    return total;

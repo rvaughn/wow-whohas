@@ -2,6 +2,8 @@
 
 if (GetLocale() == "frFR") then
 
+WHOHAS_SUBTEXT = "These options allow you to control what information WhoHas includes in your tooltips.";
+
 WhoHas.support = {
    ["none"]                     = "WhoHas: Pas d'inventaire addon trouv\195\169",
    ["SizPoss"]                  = "WhoHas: Utilise les donn\195\169es de Siz's Possessions",
@@ -17,7 +19,7 @@ WhoHas.text = {
    ["WhoHasTotalsButton"]       = "Montrez les totaux",
    ["WhoHasStackSizeButton"]    = "Montrez les tailles de pile",
    ["WhoHasInboxButton"]        = "Incluez le bo\195\174te aux lettre",
-   -- ["WhoHasKeyringButton"]      = "Incluez les clefs",
+   ["WhoHasVoidStoreButton"]    = "Include Void Storage",
    ["WhoHasEquipmentButton"]    = "Incluez les objets \195\169quip\195\169s",
    ["WhoHasBagsButton"]         = "Incluez les sacs \195\169quip\195\169s",
    ["WhoHasVaultButton"]        = "Incluez le coffre-fort de guilde",
@@ -26,6 +28,7 @@ WhoHas.text = {
    ["WhoHasOresButton"]         = "Montrez les comptes de barres, primordials et essences",
    ["WhoHasAllGuildsButton"]    = "Montrez les coffre-forts de guildes alternatives",
    ["WhoHasTabsButton"]         = "Montrez les sujets bancaire dans le coffre-forte de guilde",
+   ["WhoHasBackendSelection"]   = "Use data from addon:",
 
    ["ignore"]                   = "ignore",
    ["usage"]                    = "usage: /whohas [ignore ARTICLE]",
@@ -36,11 +39,13 @@ WhoHas.text = {
    ["charprof"]                 = "CharacterProfiler",
 }
 
+WHOHAS_BACKEND_TEXT = WhoHas.text.WhoHasBackendSelection;
+
 WhoHas.formats = {
    ["inventory"]                = "%u dans %s's Inventaire",
    ["bank"]                     = "%u sur %s's Banque",
    ["inbox"]                    = "%u dans %s's Bo\195\174te aux lettre",
-   -- ["keyring"]                  = "%u \195\160 %s's Porte-cl\195\169s",
+   ["keyring"]                  = "%u \195\160 %s's Porte-cl\195\169s",
    ["equipment"]                = "%u dans %s's Objets \195\169quip\195\169s",
    ["invbags"]                  = "%u dans %s's Sacs \195\169quip\195\169s",
    ["bankbags"]                 = "%u dans %s's Sacs bancaires",
@@ -48,6 +53,7 @@ WhoHas.formats = {
    ["multivault"]               = "%u dans %s's coffre-fort de guilde",
    ["vaulttab"]                 = "%u dans le coffre-fort de guilde dans le sujet bancaire %u",
    ["multivaulttab"]            = "%u dans %s's coffre-fort de guilde dans le sujet bancaire %u",
+   ["voidstorage"]              = "%u in %s's void storage",
 
    ["total"]                    = "Totaux: %u",
    ["stack"]                    = "Tailles de pile: %u",
@@ -83,6 +89,22 @@ WhoHas.mines = {
    ["Gisement de saronite"]                    = "Minerai de saronite",      -- saronite deposit
    ["Riche gisement de saronite"]              = "Minerai de saronite",      -- rich saronite deposit
    ["Filon de titane"]                         = "Minerai de titane",        -- titanium vein
+   -- translate these
+   ["Obsidium Deposit"]                = "Obsidium Ore",
+   ["Rich Obsidium Deposit"]           = "Obsidium Ore",
+   ["Elementium Vein"]                 = "Elementium Ore",
+   ["Rich Elementium Vein"]            = "Elementium Ore",
+   ["Pyrite Deposit"]                  = "Pyrite Ore",
+   ["Rich Pyrite Deposit"]             = "Pyrite Ore",
+   ["Ghost Iron Deposit"]              = "Ghost Iron Ore",
+   ["Rich Ghost Iron Deposit"]         = "Ghost Iron Ore",
+   -- these aren't going to work right - fix it
+   ["Trillium Vein"]                   = "Black Trillium Ore",
+   ["Trillium Vein"]                   = "White Trillium Ore",
+   ["Rich Trillium Vein"]              = "Black Trillium Ore",
+   ["Rich Trillium Vein"]              = "White Trillium Ore",
+   ["Kyparite Deposit"]                = "Kyparite",
+   ["Rich Kyparite Deposit"]           = "Kyparite",
 
    ["Gisement de pierre de sang inf\195\169rieure"] = "Minerai de pierre de sang inf\195\169rieur", -- lesser bloodstone deposit
    ["Filon d'incendicite"]                          = "Minerai d'incendicite",                      -- incendicite mineral vein
@@ -127,6 +149,25 @@ WhoHas.xlat = {
    ["Barre d'adamantite tremp\195\169"]  = "Khorium tremp\195\169",     -- hardened adamantite bar
    ["Barre de titane"]              = "Barre d'acier-titan",            -- titanium bar
 
+   -- translate these
+   ["Thorium Bar"]              = "Enchanted Thorium Bar",
+   --["Thorium Bar"]              = "Arcanite Bar",
+   ["Elementium Ingot"]         = "Enchanted Elementium Bar",
+   ["Arcanite Bar"]             = "Enchanted Elementium Bar",
+   ["Obsidium Ore"]             = "Obsidium Bar",
+   ["Obsidium Bar"]             = "Folded Obsidium",
+   ["Elementium Ore"]           = "Elementium Bar",
+   ["Elementium Bar"]           = "Hardened Elementium Bar",
+   ["Pyrite Ore"]               = "Pyrium Bar",
+   ["Pyrium Bar"]               = "Truegold",
+
+   ["Ghost Iron Ore"]           = "Ghost Iron Bar",
+   ["Ghost Iron Bar"]           = "Folded Ghost Iron",
+   ["Black Trillium Ore"]       = "Trillium Bar",
+   ["White Trillium Ore"]       = "Trillium Bar",
+   --["Ghost Iron Bar"]           = "Trillium Bar",
+   ["Trillium Bar"]             = "Living Steel",
+
    ["Eau cristallisée"]        = "Eau \195\169ternelle",     -- crystallized water
    ["Terre cristallisée"]      = "Terre \195\169ternelle",   -- crystallized earth
    ["Feu cristallisé"]         = "Feu \195\169ternel",       -- crystallized fire
@@ -142,6 +183,10 @@ WhoHas.enchant = {
    ["Essence du n\195\169ant inf\195\169rieure"]  = "Essence du n\195\169ant sup\195\169rieure",  -- Lesser Nether Essence
    ["Essence \195\169ternelle inf\195\169rieure"] = "Essence \195\169ternelle sup\195\169rieure", -- Lesser Eternal Essence
    ["Essence planaire inf\195\169rieure"]         = "Essence planaire sup\195\169rieure",         -- Lesser Planar Essence
+   -- translate these
+   ["Lesser Cosmic Essence"]      = "Greater Cosmic Essence",
+   ["Lesser Celestial Essence"]   = "Greater Celestial Essence",
+   ["Lesser Mysterious Essence"]  = "Greater Mysterious Essence",
 
    ["Essence de magie sup\195\169rieure"]         = "Essence de magie inf\195\169rieure",         -- Greater Magic Essence
    ["Essence astrale sup\195\169rieure"]          = "Essence astrale inf\195\169rieure",          -- Greater Astral Essence
@@ -149,6 +194,14 @@ WhoHas.enchant = {
    ["Essence du n\195\169ant sup\195\169rieure"]  = "Essence du n\195\169ant inf\195\169rieure",  -- Greater Nether Essence
    ["Essence \195\169ternelle sup\195\169rieure"] = "Essence \195\169ternelle inf\195\169rieure", -- Greater Eternal Essence
    ["Essence planaire sup\195\169rieure"]         = "Essence planaire inf\195\169rieure",         -- Greater Planar Essence
+   -- translate these
+   ["Greater Cosmic Essence"]     = "Lesser Cosmic Essence",
+   ["Greater Celestial Essence"]  = "Lesser Celestial Essence",
+   ["Greater Mysterious Essence"] = "Lesser Mysterious Essence",
+
+   ["Small Dream Shard"]          = "Dream Shard",
+   ["Small Heavenly Shard"]       = "Heavenly Shard",
+   ["Small Ethereal Shard"]       = "Ethereal Shard",
 }
 
 end
