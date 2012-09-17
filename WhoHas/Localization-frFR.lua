@@ -30,6 +30,9 @@ WhoHas.text = {
    ["WhoHasOresButton"]         = "Montrez les comptes de barres, primordials et essences",
    ["WhoHasAllGuildsButton"]    = "Montrez les coffre-forts de guildes alternatives",
    ["WhoHasTabsButton"]         = "Montrez les sujets bancaire dans le coffre-forte de guilde",
+   ["WhoHasFactionsButton"]     = "Include both factions",
+   ["WhoHasRealmsButton"]       = "Include all realms",
+
    ["WhoHasBackendSelection"]   = "Use data from addon:",
 
    ["ignore"]                   = "ignore",

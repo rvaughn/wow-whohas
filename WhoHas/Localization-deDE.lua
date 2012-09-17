@@ -1,4 +1,5 @@
--- German translation provided by Pelion of ri.gametraveler.ch.  Thanks Pelion!
+-- German translation originally provided by Pelion of ri.gametraveler.ch.
+-- Additional translations provided by TorenAltair.
 
 if (GetLocale() == "deDE") then
 
@@ -21,7 +22,7 @@ WhoHas.text = {
    ["WhoHasTotalsButton"]       = "Total anzeigen",
    ["WhoHasStackSizeButton"]    = "Stapelgr\195\182\195\159e anzeigen",
    ["WhoHasInboxButton"]        = "Briefkasteninhalt einbeziehen",
-   ["WhoHasVoidStoreButton"]    = "Voidstorage einbeziehen",
+   ["WhoHasVoidStoreButton"]    = "Leerenlager einbeziehen",
    ["WhoHasEquipmentButton"]    = "Ausr\195\188stung einbeziehen",
    ["WhoHasBagsButton"]         = "Zusatztaschen einbeziehen",
    ["WhoHasVaultButton"]        = "Gildentresor einbeziehen",
@@ -30,7 +31,10 @@ WhoHas.text = {
    ["WhoHasOresButton"]         = "Zeige Barren-, Elementar- und Essenzanzahl",
    ["WhoHasAllGuildsButton"]    = "Zeige alternative Gildentresore",
    ["WhoHasTabsButton"]         = "Zeige Gildenbankf\195\164cher",
-   ["WhoHasBackendSelection"]   = "Use data from addon:",
+   ["WhoHasFactionsButton"]     = "Include both factions",
+   ["WhoHasRealmsButton"]       = "Include all realms",
+
+   ["WhoHasBackendSelection"]   = "Nutze Daten von Addon:",
 
    ["ignore"]                   = "ignore",
    ["usage"]                    = "Befehl: /whohas [ignore ITEM]",
@@ -57,7 +61,7 @@ WhoHas.formats = {
    ["multivault"]               = "%u in %s's Gildentresor",
    ["vaulttab"]                 = "%u im Gildenbankfach %u", -- guildbank!
    ["multivaulttab"]            = "%u in %s's Gildenbankfach %u", -- guildbank!
-   ["voidstorage"]              = "%u in %s's Voidstorage",
+   ["voidstorage"]              = "%u in %s's Leerenlager",
 
    ["total"]                    = "Total: %u",
    ["stack"]                    = "Stapelgr\195\182\195\159e: %u",
@@ -93,22 +97,23 @@ WhoHas.mines = {
    ["Saronitablagerung"]                                    = "Saroniterz",      -- saronite deposit
    ["Reiche Saronitablagerung"]                             = "Saroniterz",      -- rich saronite deposit
    ["Titanvorkommen"]                                       = "Titanerz",        -- titanium vein
-   -- translate these
-   ["Obsidium Deposit"]                = "Obsidium Ore",
-   ["Rich Obsidium Deposit"]           = "Obsidium Ore",
-   ["Elementium Vein"]                 = "Elementium Ore",
-   ["Rich Elementium Vein"]            = "Elementium Ore",
-   ["Pyrite Deposit"]                  = "Pyrite Ore",
-   ["Rich Pyrite Deposit"]             = "Pyrite Ore",
-   ["Ghost Iron Deposit"]              = "Ghost Iron Ore",
-   ["Rich Ghost Iron Deposit"]         = "Ghost Iron Ore",
+   ["Obsidiumvorkommen"]                                    = "Obsidiumerz",
+   ["Reiches Obsidiumvorkommen"]                            = "Obsidiumerz",
+   ["Elementiumader"]                                       = "Elementiumerz",
+   ["Reiche Elementiumader"]                                = "Elementiumerz",
+   ["Pyritvorkommen"]                                       = "Pyriterz",
+   ["Reiches Pyritvorkommen"]                               = "Pyriterz",
+
+   -- fix these after MoP release
+   ["Ghost Iron Deposit"]              = "Geistereisenerz",
+   ["Rich Ghost Iron Deposit"]         = "Geistereisenerz",
    -- these aren't going to work right - fix it
-   ["Trillium Vein"]                   = "Black Trillium Ore",
-   ["Trillium Vein"]                   = "White Trillium Ore",
-   ["Rich Trillium Vein"]              = "Black Trillium Ore",
-   ["Rich Trillium Vein"]              = "White Trillium Ore",
-   ["Kyparite Deposit"]                = "Kyparite",
-   ["Rich Kyparite Deposit"]           = "Kyparite",
+   ["Trillium Vein"]                   = "Schwarzes Trilliumerz",
+   ["Trillium Vein"]                   = "Wei\195\159es Trilliumerz",
+   ["Rich Trillium Vein"]              = "Schwarzes Trilliumerz",
+   ["Rich Trillium Vein"]              = "Wei\195\159es Trilliumerz",
+   ["Kyparite Deposit"]                = "Kyparit",
+   ["Rich Kyparite Deposit"]           = "Kyparit",
 
    ["Geringe Blutsteinablagerung"] = "Geringes Blutsteinerz", -- lesser bloodstone deposit
    ["Pyrophormineralvorkommen"]    = "Pyrophorerz",           -- incendicite mineral vein
@@ -153,24 +158,23 @@ WhoHas.xlat = {
    ["Geh\195\164rteter Adamantitbarren"]  = "Geh\195\164rtetes Khorium",	-- hardened adamantite bar
    ["Titanbarren"]              = "Titanstahlbarren",                  -- titanium bar
 
-   -- translate these
-   ["Thorium Bar"]              = "Enchanted Thorium Bar",
-   --["Thorium Bar"]              = "Arcanite Bar",
-   ["Elementium Ingot"]         = "Enchanted Elementium Bar",
-   ["Arcanite Bar"]             = "Enchanted Elementium Bar",
-   ["Obsidium Ore"]             = "Obsidium Bar",
-   ["Obsidium Bar"]             = "Folded Obsidium",
-   ["Elementium Ore"]           = "Elementium Bar",
-   ["Elementium Bar"]           = "Hardened Elementium Bar",
-   ["Pyrite Ore"]               = "Pyrium Bar",
-   ["Pyrium Bar"]               = "Truegold",
+   ["Thoriumbarren"]            = "Verzauberter Thoriumbarren",
+   --["Thoriumbarren"]            = "Arkanitbarren",
+   ["Elementiumblock"]          = "Verzauberter Elementiumbarren",
+   ["Arkanitbarren"]            = "Verzauberter Elementiumbarren",
+   ["Obsidiumerz"]              = "Obsidiumbarren",
+   ["Obsidiumbarren"]           = "Gefaltetes Obsidium",
+   ["Elementiumerz"]            = "Elementiumbarren",
+   ["Elementiumbarren"]         = "Geh\195\164rteter Elementiumbarren",
+   ["Pyriterz"]                 = "Pyriumbarren",
+   ["Pyriumbarren"]             = "Echtgold",
 
-   ["Ghost Iron Ore"]           = "Ghost Iron Bar",
-   ["Ghost Iron Bar"]           = "Folded Ghost Iron",
-   ["Black Trillium Ore"]       = "Trillium Bar",
-   ["White Trillium Ore"]       = "Trillium Bar",
-   --["Ghost Iron Bar"]           = "Trillium Bar",
-   ["Trillium Bar"]             = "Living Steel",
+   ["Geistereisenerz"]          = "Geistereisenbarren",
+   ["Geistereisenbarren"]       = "Gefaltetes Geistereisen",
+   ["Schwarzes Trilliumerz"]    = "Trilliumbarren",
+   ["Wei\195\159es Trilliumerz"]= "Trilliumbarren",
+   --["Geistereisenbarren"]     = "Trilliumbarren",
+   ["Trilliumbarren"]           = "Lebendiger Stahl",
 
    ["Kristallisierte Wasser"]        = "\195\132onenwasser",     -- crystallized water
    ["Kristallisierte Erde"]          = "\195\132onenerde",       -- crystallized earth
@@ -181,31 +185,29 @@ WhoHas.xlat = {
 }
 
 WhoHas.enchant = {
-   ["Geringe Magieessenz"]         = "Gro\195\159e Magieessenz",    -- Lesser Magic Essence
-   ["Geringe Astralessenz"]        = "Gro\195\159e Astralessenz",   -- Lesser Astral Essence
-   ["Geringe Mystikeressenz"]      = "Gro\195\159e Mystikeressenz", -- Lesser Mystic Essence
-   ["Geringe Netheressenz"]        = "Gro\195\159e Netheressenz",   -- Lesser Nether Essence
-   ["Geringe ewige Essenz"]        = "Gro\195\159e ewige Essenz",   -- Lesser Eternal Essence
-   ["Geringe Planaressenz"]        = "Gro\195\159e Planaressenz",   -- Lesser Planar Essence
-   -- translate these
-   ["Lesser Cosmic Essence"]      = "Greater Cosmic Essence",
-   ["Lesser Celestial Essence"]   = "Greater Celestial Essence",
-   ["Lesser Mysterious Essence"]  = "Greater Mysterious Essence",
+   ["Geringe Magieessenz"]              = "Gro\195\159e Magieessenz",    -- Lesser Magic Essence
+   ["Geringe Astralessenz"]             = "Gro\195\159e Astralessenz",   -- Lesser Astral Essence
+   ["Geringe Mystikeressenz"]           = "Gro\195\159e Mystikeressenz", -- Lesser Mystic Essence
+   ["Geringe Netheressenz"]             = "Gro\195\159e Netheressenz",   -- Lesser Nether Essence
+   ["Geringe ewige Essenz"]             = "Gro\195\159e ewige Essenz",   -- Lesser Eternal Essence
+   ["Geringe Planaressenz"]             = "Gro\195\159e Planaressenz",   -- Lesser Planar Essence
+   ["Geringe kosmische Essenz"]         = "Gro\195\159e kosmische Essenz",
+   ["Geringe himmlische Essenz"]        = "Gro\195\159e himmlische Essenz",
+   ["Geringe mysteri\195\182se Essenz"] = "Gro\195\159e mysteri\195\182se Essenz",
 
-   ["Gro\195\159e Magieessenz"]    = "Geringe Magieessenz",         -- Greater Magic Essence
-   ["Gro\195\159e Astralessenz"]   = "Geringe Astralessenz",        -- Greater Astral Essence
-   ["Gro\195\159e Mystikeressenz"] = "Geringe Mystikeressenz",      -- Greater Mystic Essence
-   ["Gro\195\159e Netheressenz"]   = "Geringe Netheressenz",        -- Greater Nether Essence
-   ["Gro\195\159e ewige Essenz"]   = "Geringe ewige Essenz",        -- Greater Eternal Essence
-   ["Gro\195\159e Planaressenz"]   = "Geringe Planaressenz",        -- Greater Planar Essence
-   -- translate these
-   ["Greater Cosmic Essence"]     = "Lesser Cosmic Essence",
-   ["Greater Celestial Essence"]  = "Lesser Celestial Essence",
-   ["Greater Mysterious Essence"] = "Lesser Mysterious Essence",
+   ["Gro\195\159e Magieessenz"]              = "Geringe Magieessenz",         -- Greater Magic Essence
+   ["Gro\195\159e Astralessenz"]             = "Geringe Astralessenz",        -- Greater Astral Essence
+   ["Gro\195\159e Mystikeressenz"]           = "Geringe Mystikeressenz",      -- Greater Mystic Essence
+   ["Gro\195\159e Netheressenz"]             = "Geringe Netheressenz",        -- Greater Nether Essence
+   ["Gro\195\159e ewige Essenz"]             = "Geringe ewige Essenz",        -- Greater Eternal Essence
+   ["Gro\195\159e Planaressenz"]             = "Geringe Planaressenz",        -- Greater Planar Essence
+   ["Gro\195\159e kosmische Essenz"]         = "Geringe kosmische Essenz",
+   ["Gro\195\159e himmlische Essenz"]        = "Geringe himmlische Essenz",
+   ["Gro\195\159e mysteri\195\182se Essenz"] = "Geringe mysteri\195\182se Essenz",
 
-   ["Small Dream Shard"]          = "Dream Shard",
-   ["Small Heavenly Shard"]       = "Heavenly Shard",
-   ["Small Ethereal Shard"]       = "Ethereal Shard",
+   ["Kleiner Traumsplitter"]                 = "Traumsplitter",
+   ["Kleiner himmlischer Splitter"]          = "Himmlischer Splitter",
+   ["Kleiner \195\164therischer Splitter"]   = "\195\132therischer Splitter",
 }
 
 end
