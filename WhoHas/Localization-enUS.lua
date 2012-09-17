@@ -6,10 +6,12 @@ WHOHAS_SUBTEXT = "These options allow you to control what information WhoHas inc
 
 WhoHas.support = {
    ["none"]                     = "WhoHas: no inventory addon found",
-   ["SizPoss"]                  = "WhoHas: using Siz's Possessions data",
+   ["SizPoss"]                  = "WhoHas: using Possessions data",
    ["LSPoss"]                   = "WhoHas: using Lauchsuppe's Possessions data",
    ["CP"]                       = "WhoHas: using CharacterProfiler data",
    ["Armory"]                   = "WhoHas: using Armory data",
+   ["Altoholic"]                = "WhoHas: using Altoholic data",
+   ["Bagnon"]                   = "WhoHas: using Bagnon data",
 }
 
 WhoHas.text = {
@@ -28,6 +30,9 @@ WhoHas.text = {
    ["WhoHasOresButton"]         = "Show metal, primal and essence counts",
    ["WhoHasAllGuildsButton"]    = "Show alt Guild Vaults",
    ["WhoHasTabsButton"]         = "Show tabs in Guild Vaults",
+   ["WhoHasFactionsButton"]     = "Include both factions",
+   ["WhoHasRealmsButton"]       = "Include all realms",
+
    ["WhoHasBackendSelection"]   = "Use data from addon:",
 
    ["ignore"]                   = "ignore",
@@ -37,6 +42,8 @@ WhoHas.text = {
    ["armory"]                   = "Armory",
    ["possess"]                  = "Possessions",
    ["charprof"]                 = "CharacterProfiler",
+   ["altoholic"]                = "Altoholic",
+   ["bagnon"]                   = "Bagnon",
 }
 
 WHOHAS_BACKEND_TEXT = WhoHas.text.WhoHasBackendSelection;

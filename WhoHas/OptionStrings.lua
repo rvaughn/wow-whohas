@@ -13,6 +13,8 @@ WhoHas.option_strings = {
    ["WhoHasOptionsPanelAllGuildsButton"]  = "allguilds",
    ["WhoHasOptionsPanelTabsButton"]       = "vaulttabs",
    ["WhoHasOptionsPanelVoidStoreButton"]  = "voidstore",
+   ["WhoHasOptionsPanelFactionsButton"]   = "allfactions",
+   ["WhoHasOptionsPanelRealmsButton"]     = "allrealms",
 }
 
 -- these reference already-localized strings
@@ -30,4 +32,6 @@ WhoHas.option_text = {
    ["WhoHasOptionsPanelAllGuildsButton"] = WhoHas.text.WhoHasAllGuildsButton,
    ["WhoHasOptionsPanelTabsButton"]      = WhoHas.text.WhoHasTabsButton,
    ["WhoHasOptionsPanelVoidStoreButton"] = WhoHas.text.WhoHasVoidStoreButton,
+   ["WhoHasOptionsPanelFactionsButton"]  = WhoHas.text.WhoHasFactionsButton,
+   ["WhoHasOptionsPanelRealmsButton"]    = WhoHas.text.WhoHasRealmsButton,
 }

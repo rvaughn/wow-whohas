@@ -1,7 +1,7 @@
 -- define a few globals
 WhoHas = {}
 
-WHOHAS_CONFIG_VERSION = 7;
+WHOHAS_CONFIG_VERSION = 8;
 
 WhoHasConfig = {
    enabled          = 1,
@@ -29,6 +29,8 @@ WhoHasConfig = {
    backend          = nil,
 -- added in v7
    voidstore        = 1,
+-- added in v8
+   allrealms        = nil,
 }
 
 WhoHasData = {
@@ -78,7 +80,7 @@ categories = {
    WHOHAS_CATEGORY_EQUIPMENT,
    WHOHAS_CATEGORY_INVBAGS,
    WHOHAS_CATEGORY_BANKBAGS,
-   WHOHAS_CATEGORY_VOIDSTORE,
+   WHOHAS_CATEGORY_VOIDSTORE
 }
 
 -------------------------------------------------------------------------------
@@ -180,46 +182,50 @@ function UpdateGuild()
 end
 
 function UpdateScanner()
-   local scanner = nil;
+   local scanner = nil
 
    if (config) then
-      if (config.backend == "Armory") then
-         scanner = Scanner.Armory;
+      if (config.backend == "Altoholic") then
+         scanner = Scanner.Altoholic
+      elseif (config.backend == "Armory") then
+         scanner = Scanner.Armory
       elseif (config.backend == "Possessions") then
          if (POSS_USEDBANKBAGS_CONTAINER) then
-            scanner = Scanner.Possessions.Lauchsuppe;
+            scanner = Scanner.Possessions.Lauchsuppe
          else
-            scanner = Scanner.Possessions.Siz;
+            scanner = Scanner.Possessions.Siz
          end
       elseif (config.backend == "CharacterProfiler") then
-         scanner = Scanner.CharacterProfiler;
+         scanner = Scanner.CharacterProfiler
       end
    end
 
    -- everything else is default "auto" type
    if (not scanner) then
-      if (ArmoryDB) then
-         scanner = Scanner.Armory;
+      if (DataStore) then
+         scanner = Scanner.Altoholic
+      elseif (ArmoryDB) then
+         scanner = Scanner.Armory
       elseif (PossessionsData) then
          if (POSS_USEDBANKBAGS_CONTAINER) then
-            scanner = Scanner.Possessions.Lauchsuppe;
+            scanner = Scanner.Possessions.Lauchsuppe
          else
-            scanner = Scanner.Possessions.Siz;
+            scanner = Scanner.Possessions.Siz
          end
       elseif (myProfile) then
-         scanner = Scanner.CharacterProfiler;
+         scanner = Scanner.CharacterProfiler
       end
    end
 
    -- last ditch... we didn't match anything
    if (not scanner) then
-      scanner = Scanner.Default;
+      scanner = Scanner.Default
    end
 
    if (backend ~= scanner) then
-      backend = scanner;
-      ForceFullRefresh();
-      DEFAULT_CHAT_FRAME:AddMessage(backend:GetAnnounce());
+      backend = scanner
+      ForceFullRefresh()
+      DEFAULT_CHAT_FRAME:AddMessage(backend:GetAnnounce())
    end
 end
 
@@ -364,10 +370,12 @@ function BackendList_OnLoad(self)
 end
 
 backendOptions = {
-   { key="auto", value="auto" },
-   { key="armory", value="Armory" },
-   { key="possess", value="Possessions" },
-   { key="charprof", value="CharacterProfiler" }
+   { key="auto",      value="auto" },
+   { key="armory",    value="Armory" },
+   { key="possess",   value="Possessions" },
+   { key="charprof",  value="CharacterProfiler" },
+   { key="altoholic", value="Altoholic" },
+   -- { key="bagnon",    value="Bagnon" },
 };
 
 function BackendList_Init(frame, level, menuList)

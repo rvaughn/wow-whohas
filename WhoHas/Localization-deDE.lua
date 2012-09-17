@@ -6,10 +6,12 @@ WHOHAS_SUBTEXT = "These options allow you to control what information WhoHas inc
 
 WhoHas.support = {
    ["none"]                     = "WhoHas: Kein Inventar-AddOn gefunden",
-   ["SizPoss"]                  = "WhoHas: Verwende Siz's Possessions Daten",
+   ["SizPoss"]                  = "WhoHas: Verwende Possessions Daten",
    ["LSPoss"]                   = "WhoHas: Verwende Lauchsuppe's Possessions Daten",
    ["CP"]                       = "WhoHas: Verwende CharacterProfiler Daten",
    ["Armory"]                   = "WhoHas: Verwende Arsenal Daten",
+   ["Altoholic"]                = "WhoHas: Verwende Altoholic Daten",
+   ["Bagnon"]                   = "WhoHas: Verwende Bagnon Daten",
 }
 
 WhoHas.text = {
@@ -19,7 +21,7 @@ WhoHas.text = {
    ["WhoHasTotalsButton"]       = "Total anzeigen",
    ["WhoHasStackSizeButton"]    = "Stapelgr\195\182\195\159e anzeigen",
    ["WhoHasInboxButton"]        = "Briefkasteninhalt einbeziehen",
-   ["WhoHasVoidStoreButton"]    = "Include Void Storage",
+   ["WhoHasVoidStoreButton"]    = "Voidstorage einbeziehen",
    ["WhoHasEquipmentButton"]    = "Ausr\195\188stung einbeziehen",
    ["WhoHasBagsButton"]         = "Zusatztaschen einbeziehen",
    ["WhoHasVaultButton"]        = "Gildentresor einbeziehen",
@@ -37,6 +39,8 @@ WhoHas.text = {
    ["armory"]                   = "Armory",
    ["possess"]                  = "Possessions",
    ["charprof"]                 = "CharacterProfiler",
+   ["altoholic"]                = "Altoholic",
+   ["bagnon"]                   = "Bagnon",
 }
 
 WHOHAS_BACKEND_TEXT = WhoHas.text.WhoHasBackendSelection;

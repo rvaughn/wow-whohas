@@ -1,3 +1,14 @@
+2012-09-16 version 5.1.0
+        
+    * Added support for Altoholic.
+        
+    * Added the "all factions" option. This has actually been
+      in the code for a long time, but was never exposed in the
+      UI. I don't know why.
+        
+    * Added the "all realms" option. Currently this only work
+      with Altoholic.
+        
 2012-09-13 version 5.0.1
         
     * Note: This version patches one specific error. You do not

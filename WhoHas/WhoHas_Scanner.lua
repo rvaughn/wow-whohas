@@ -64,8 +64,14 @@ end
 
 function Scanner.Default:AddItem(cache, name, count, category)
    if (name) then
-      cache[name] = cache[name] or {};
-      cache[name][category] = (cache[name][category] or 0) + count;
+      -- stupid, stupid, stupid. I didn't include the category in vault data,
+      -- so I have to treat it differently. review this later.
+      if (category == WHOHAS_CATEGORY_VAULT) then
+         cache[name] = (cache[name] or 0) + count
+      else
+         cache[name] = cache[name] or {}
+         cache[name][category] = (cache[name][category] or 0) + count
+      end
    end
 end
 

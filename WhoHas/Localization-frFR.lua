@@ -6,10 +6,12 @@ WHOHAS_SUBTEXT = "These options allow you to control what information WhoHas inc
 
 WhoHas.support = {
    ["none"]                     = "WhoHas: Pas d'inventaire addon trouv\195\169",
-   ["SizPoss"]                  = "WhoHas: Utilise les donn\195\169es de Siz's Possessions",
+   ["SizPoss"]                  = "WhoHas: Utilise les donn\195\169es de Possessions",
    ["LSPoss"]                   = "WhoHas: Utilise les donn\195\169es de Lauchsuppe's Possessions",
    ["CP"]                       = "WhoHas: Utilise les donn\195\169es de CharacterProfiler",
    ["Armory"]                   = "WhoHas: Utilise les donn\195\169es de l'Armurerie",
+   ["Altoholic"]                = "WhoHas: Utilise les donn\195\169es de Altoholic",
+   ["Bagnon"]                   = "WhoHas: Utilise les donn\195\169es de Bagnon",
 }
 
 WhoHas.text = {
@@ -19,7 +21,7 @@ WhoHas.text = {
    ["WhoHasTotalsButton"]       = "Montrez les totaux",
    ["WhoHasStackSizeButton"]    = "Montrez les tailles de pile",
    ["WhoHasInboxButton"]        = "Incluez le bo\195\174te aux lettre",
-   ["WhoHasVoidStoreButton"]    = "Include Void Storage",
+   ["WhoHasVoidStoreButton"]    = "Incluez le chambre du vire",
    ["WhoHasEquipmentButton"]    = "Incluez les objets \195\169quip\195\169s",
    ["WhoHasBagsButton"]         = "Incluez les sacs \195\169quip\195\169s",
    ["WhoHasVaultButton"]        = "Incluez le coffre-fort de guilde",
@@ -37,6 +39,8 @@ WhoHas.text = {
    ["armory"]                   = "Armory",
    ["possess"]                  = "Possessions",
    ["charprof"]                 = "CharacterProfiler",
+   ["altoholic"]                = "Altoholic",
+   ["bagnon"]                   = "Bagnon",
 }
 
 WHOHAS_BACKEND_TEXT = WhoHas.text.WhoHasBackendSelection;
@@ -53,7 +57,7 @@ WhoHas.formats = {
    ["multivault"]               = "%u dans %s's coffre-fort de guilde",
    ["vaulttab"]                 = "%u dans le coffre-fort de guilde dans le sujet bancaire %u",
    ["multivaulttab"]            = "%u dans %s's coffre-fort de guilde dans le sujet bancaire %u",
-   ["voidstorage"]              = "%u in %s's void storage",
+   ["voidstorage"]              = "%u dans %s's Chambre du Vide",
 
    ["total"]                    = "Totaux: %u",
    ["stack"]                    = "Tailles de pile: %u",
@@ -90,7 +94,7 @@ WhoHas.mines = {
    ["Riche gisement de saronite"]              = "Minerai de saronite",      -- rich saronite deposit
    ["Filon de titane"]                         = "Minerai de titane",        -- titanium vein
    -- translate these
-   ["Obsidium Deposit"]                = "Obsidium Ore",
+   ["Gisement d'obsidium"]                = "Obsidium Ore",
    ["Rich Obsidium Deposit"]           = "Obsidium Ore",
    ["Elementium Vein"]                 = "Elementium Ore",
    ["Rich Elementium Vein"]            = "Elementium Ore",

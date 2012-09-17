@@ -6,6 +6,7 @@
   <Script file="WhoHas_Armory_old.lua" />
   <Script file="WhoHas_Possessions.lua" />
   <Script file="WhoHas_CharacterProfiler.lua" />
+  <Script file="WhoHas_Altoholic.lua" />
   <Script file="Localization-enUS.lua" />
   <Script file="Localization-deDE.lua" />
   <Script file="Localization-frFR.lua" />
@@ -200,9 +201,27 @@
           </Anchor>
         </Anchors>
       </CheckButton>      
-      <CheckButton name="$parentBagsButton" inherits="WhoHasOptionButtonTemplate">
+      <CheckButton name="$parentFactionsButton" inherits="WhoHasOptionButtonTemplate">
         <Anchors>
           <Anchor point="TOPLEFT" relativeTo="$parentEquipmentButton" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="4"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>      
+      <CheckButton name="$parentRealmsButton" inherits="WhoHasOptionButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentFactionsButton" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="4"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>      
+      <CheckButton name="$parentBagsButton" inherits="WhoHasOptionButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentRealmsButton" relativePoint="BOTTOMLEFT">
             <Offset>
               <AbsDimension x="0" y="4"/>
             </Offset>
