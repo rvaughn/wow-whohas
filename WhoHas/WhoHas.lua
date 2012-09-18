@@ -650,7 +650,7 @@ function ListChar(charName, charData, text)
             table.insert(text, string.format(formats[category], count, charName));
             total = total + count;
          else
-            debug("category format not found: " .. (format or "nil"))
+            debug("category format not found: " .. (category or "nil"))
          end
       end
    end
