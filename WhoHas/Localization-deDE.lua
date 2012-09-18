@@ -61,7 +61,7 @@ WhoHas.formats = {
    ["multivault"]               = "%u in %s's Gildentresor",
    ["vaulttab"]                 = "%u im Gildenbankfach %u", -- guildbank!
    ["multivaulttab"]            = "%u in %s's Gildenbankfach %u", -- guildbank!
-   ["voidstorage"]              = "%u in %s's Leerenlager",
+   ["voidstore"]                = "%u in %s's Leerenlager",
 
    ["total"]                    = "Total: %u",
    ["stack"]                    = "Stapelgr\195\182\195\159e: %u",

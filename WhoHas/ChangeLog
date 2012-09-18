@@ -1,3 +1,13 @@
+2012-09-17 version 5.1.1
+        
+    * This version only affects German and French clients. If
+      you are running an English client you do not need this update.
+        
+    * Fixed a stupid error in the localizations for Void Storage.
+        
+    * German translations are now complete, except for MoP mines.
+      Thanks again to TorenAltair!
+        
 2012-09-16 version 5.1.0
         
     * Added support for Altoholic.
@@ -10,6 +20,7 @@
       with Altoholic.
         
     * Updated German translations. (Still incomplete though.)
+      Thanks to TorenAltair!
         
 2012-09-13 version 5.0.1
         

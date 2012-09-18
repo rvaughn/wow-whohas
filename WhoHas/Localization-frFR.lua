@@ -60,7 +60,7 @@ WhoHas.formats = {
    ["multivault"]               = "%u dans %s's coffre-fort de guilde",
    ["vaulttab"]                 = "%u dans le coffre-fort de guilde dans le sujet bancaire %u",
    ["multivaulttab"]            = "%u dans %s's coffre-fort de guilde dans le sujet bancaire %u",
-   ["voidstorage"]              = "%u dans %s's Chambre du Vide",
+   ["voidstore"]                = "%u dans %s's Chambre du Vide",
 
    ["total"]                    = "Totaux: %u",
    ["stack"]                    = "Tailles de pile: %u",
