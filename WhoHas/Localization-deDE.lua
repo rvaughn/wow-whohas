@@ -3,7 +3,7 @@
 
 if (GetLocale() == "deDE") then
 
-WHOHAS_SUBTEXT = "These options allow you to control what information WhoHas includes in your tooltips.";
+WHOHAS_SUBTEXT = "Diese Optionen erlauben Dir zu kontrollieren welche Informationen WhoHas in Deinen Tooltips anzeigt.";
 
 WhoHas.support = {
    ["none"]                     = "WhoHas: Kein Inventar-AddOn gefunden",
@@ -31,8 +31,8 @@ WhoHas.text = {
    ["WhoHasOresButton"]         = "Zeige Barren-, Elementar- und Essenzanzahl",
    ["WhoHasAllGuildsButton"]    = "Zeige alternative Gildentresore",
    ["WhoHasTabsButton"]         = "Zeige Gildenbankf\195\164cher",
-   ["WhoHasFactionsButton"]     = "Include both factions",
-   ["WhoHasRealmsButton"]       = "Include all realms",
+   ["WhoHasFactionsButton"]     = "Beide Fraktionen einbinden",
+   ["WhoHasRealmsButton"]       = "Alle Realms einbinden",
 
    ["WhoHasBackendSelection"]   = "Nutze Daten von Addon:",
 
