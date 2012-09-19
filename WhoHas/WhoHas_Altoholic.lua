@@ -132,8 +132,10 @@ function Scanner.Altoholic:ScanInbox(char, type, cache)
    if (mails) then
       for index = 1, mails do
          local _, count, link = DataStore:GetMailInfo(char, index)
-         local name = GetItemInfo(link)
-         self:AddItem(cache, name, count, type)
+         if (link) then
+            local name = GetItemInfo(link)
+            self:AddItem(cache, name, count, type)
+         end
       end
    end
 end

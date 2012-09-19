@@ -1,3 +1,8 @@
+2012-09-18 version 5.1.2
+        
+    * Fixed an issue where mails without attachments would cause
+      an error when using Altoholic data.
+
 2012-09-17 version 5.1.1
         
     * This version only affects German and French clients. If
