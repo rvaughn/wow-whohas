@@ -1,3 +1,7 @@
+2012-09-23 version 5.2.0
+        
+    * Completely rewrote the Armory scanner to work with Armory 5.
+
 2012-09-18 version 5.1.2
         
     * Fixed an issue where mails without attachments would cause

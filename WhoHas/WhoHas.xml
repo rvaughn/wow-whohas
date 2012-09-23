@@ -3,7 +3,7 @@
 
   <Script file="WhoHas.lua" />
   <Script file="WhoHas_Scanner.lua" />
-  <Script file="WhoHas_Armory_old.lua" />
+  <Script file="WhoHas_Armory.lua" />
   <Script file="WhoHas_Possessions.lua" />
   <Script file="WhoHas_CharacterProfiler.lua" />
   <Script file="WhoHas_Altoholic.lua" />
