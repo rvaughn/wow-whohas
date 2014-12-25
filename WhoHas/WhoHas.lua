@@ -72,6 +72,7 @@ WHOHAS_CATEGORY_VAULT     = "vault";
 WHOHAS_CATEGORY_TOTAL     = "total";
 WHOHAS_CATEGORY_STACK     = "stack";
 WHOHAS_CATEGORY_VOIDSTORE = "voidstore";
+WHOHAS_CATEGORY_REAGENTS  = "reagents";
 
 categories = {
    WHOHAS_CATEGORY_INVENTORY,
@@ -80,7 +81,8 @@ categories = {
    WHOHAS_CATEGORY_EQUIPMENT,
    WHOHAS_CATEGORY_INVBAGS,
    WHOHAS_CATEGORY_BANKBAGS,
-   WHOHAS_CATEGORY_VOIDSTORE
+   WHOHAS_CATEGORY_VOIDSTORE,
+   WHOHAS_CATEGORY_REAGENTS,
 }
 
 -------------------------------------------------------------------------------
@@ -562,6 +564,13 @@ function UpdateCaches()
 end
 
 function UpdateTooltipText(name)
+   -- support RaresTip by Nathanyel
+   if RaresTip and not hasRT then
+      RaresTip:HookScript("OnTooltipSetItem", OnTooltipSetItem);
+      RaresTip:HookScript("OnTooltipCleared", OnTooltipCleared);
+      hasRT = true
+   end
+
    if (name ~= savedName) then
       tooltipText = {};
       savedName = name;

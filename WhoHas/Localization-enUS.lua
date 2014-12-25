@@ -61,6 +61,7 @@ WhoHas.formats = {
    ["vaulttab"]                 = "%u in the Guild Vault tab %u",
    ["multivaulttab"]            = "%u in %s's Guild Vault tab %u",
    ["voidstore"]                = "%u in %s's void storage",
+   ["reagents"]                 = "%u in %s's Reagent Tab",
 
    ["total"]                    = "%u total",
    ["stack"]                    = "Stack size: %u",
@@ -205,4 +206,7 @@ WhoHas.enchant = {
    ["Small Dream Shard"]          = "Dream Shard",
    ["Small Heavenly Shard"]       = "Heavenly Shard",
    ["Small Ethereal Shard"]       = "Ethereal Shard",
+
+   ["Mote of Harmony"]            = "Spirit of Harmony",
+   ["Spirit of Harmony"]          = "Mote of Harmony",
 }

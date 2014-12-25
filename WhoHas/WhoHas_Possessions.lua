@@ -28,7 +28,8 @@ Scanner.Possessions.Siz.slots = {
    VoidStore = { -4 },
    InvBags   = { -5 },
    BankBags  = { -6 },
-   Vault     = { -7 }
+   Vault     = { -7 },
+   Reagents  = { -8 },
 }
 
 function Scanner.Possessions.Siz:HasVaultData()
@@ -120,6 +121,7 @@ function Scanner.Possessions:ScanChar(charName, charData, cache)
    if (charData and charData.items) then
       self:ScanBags(charName, WHOHAS_CATEGORY_INVENTORY, charData.items, self.slots.Inventory, cache);
       self:ScanBags(charName, WHOHAS_CATEGORY_BANK, charData.items, self.slots.Bank, cache);
+      self:ScanBags(charName, WHOHAS_CATEGORY_REAGENTS, charData.items, self.slots.Reagents, cache);
       if (config.inbox) then
          self:ScanBags(charName, WHOHAS_CATEGORY_INBOX, charData.items, self.slots.Inbox, cache);
       end
