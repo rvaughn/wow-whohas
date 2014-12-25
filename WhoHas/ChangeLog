@@ -1,9 +1,18 @@
 2014-12-25 version 6.0.0
 
+    * Updated for WoW 6.0.
+
     * Fixed an error that occurs when Altoholic does not return a
       character's container data.
 
-    * Updated for WoW 6.0.
+    * Added Nathanyel's patch for Reagent Bank support with
+      Possessions. All credit goes to him for this! See
+      http://www.wowinterface.com/downloads/fileinfo.php?id=23301.
+
+    * Added Nathanyel's patch for RaresTip support. Again, all credit
+      for this goes to Nathanyel.
+
+    * Added Reagent Bank support for Armory and Altoholic.
 
 2012-09-23 version 5.2.0
         

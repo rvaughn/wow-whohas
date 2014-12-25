@@ -1,7 +1,7 @@
 -- define a few globals
 WhoHas = {}
 
-WHOHAS_CONFIG_VERSION = 8;
+WHOHAS_CONFIG_VERSION = 9;
 
 WhoHasConfig = {
    enabled          = 1,
@@ -31,6 +31,8 @@ WhoHasConfig = {
    voidstore        = 1,
 -- added in v8
    allrealms        = nil,
+-- added in v9
+   reagents         = nil,
 }
 
 WhoHasData = {

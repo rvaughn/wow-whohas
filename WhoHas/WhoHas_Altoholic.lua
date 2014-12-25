@@ -107,6 +107,9 @@ function Scanner.Altoholic:ScanChar(char, cache)
       -- bank
       self:ScanBag(self:GetBag(char, 100), WHOHAS_CATEGORY_BANK, cache) -- main bank
       self:ScanBags(char, self.slots.Bank, WHOHAS_CATEGORY_BANK, cache)
+
+      -- reagent bank
+      self:ScanBag(self:GetBag(char, REAGENTBANK_CONTAINER), WHOHAS_CATEGORY_REAGENTS, cache)
    
       -- bank bags
       if (config.bags) then
@@ -184,7 +187,7 @@ function Scanner.Altoholic:GetBag(char, id)
    -- prereq: char must be valid
    if (type(id) == "number") then
       return DataStore:GetContainer(char, id)
-   elseif DataStore:GetContainers(char)
+   elseif DataStore:GetContainers(char) then
       return DataStore:GetContainers(char)[id]
    else
       return nil

@@ -61,7 +61,7 @@ WhoHas.formats = {
    ["vaulttab"]                 = "%u in the Guild Vault tab %u",
    ["multivaulttab"]            = "%u in %s's Guild Vault tab %u",
    ["voidstore"]                = "%u in %s's void storage",
-   ["reagents"]                 = "%u in %s's Reagent Tab",
+   ["reagents"]                 = "%u in %s's reagent bank",
 
    ["total"]                    = "%u total",
    ["stack"]                    = "Stack size: %u",

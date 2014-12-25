@@ -116,6 +116,9 @@ function Scanner.Armory:ScanChar(cache)
 
    -- bank
    self:ScanBank(cache)
+
+   -- reagent bank
+   self:ScanReagentBank(cache)
    
    -- bags
    if (config.bags) then
@@ -170,6 +173,10 @@ function Scanner.Armory:ScanBank(cache)
    for index = 1, NUM_BANKBAGSLOTS do
       self:ScanBag(index + NUM_BAG_SLOTS, WHOHAS_CATEGORY_BANK, cache)
    end
+end
+
+function Scanner.Armory:ScanReagentBank(cache)
+   self:ScanBag(ARMORY_REAGENTBANK_CONTAINER, WHOHAS_CATEGORY_REAGENTS, cache)
 end
 
 function Scanner.Armory:ScanBag(bag, type, cache)
