@@ -184,7 +184,9 @@ function Scanner.Altoholic:GetBag(char, id)
    -- prereq: char must be valid
    if (type(id) == "number") then
       return DataStore:GetContainer(char, id)
-   else
+   elseif DataStore:GetContainers(char)
       return DataStore:GetContainers(char)[id]
+   else
+      return nil
    end
 end
