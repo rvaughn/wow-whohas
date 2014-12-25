@@ -1,3 +1,10 @@
+2014-12-25 version 6.0.0
+
+    * Fixed an error that occurs when Altoholic does not return a
+      character's container data.
+
+    * Updated for WoW 6.0.
+
 2012-09-23 version 5.2.0
         
     * Completely rewrote the Armory scanner to work with Armory 5.
